@@ -192,6 +192,14 @@ h1 {
   background-color: #31a9e1;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 @media only screen and (max-width: 600px) {
   .nav-btn {
     display: none;
