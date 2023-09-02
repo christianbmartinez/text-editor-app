@@ -1,5 +1,5 @@
 import { openDB } from 'idb'
-
+// Function to initialize the db
 const initdb = async () =>
   openDB('jate', 1, {
     upgrade(db) {
@@ -11,8 +11,7 @@ const initdb = async () =>
       console.log('jate database created')
     },
   })
-
-// TODO: Add logic to a method that accepts some content and adds it to the database
+// Function to change the content in the db
 export const putDb = async (content) => {
   try {
     const connection = await openDB('jate', 1)
@@ -24,8 +23,7 @@ export const putDb = async (content) => {
     console.log(err)
   }
 }
-
-// TODO: Add logic for a method that gets all the content from the database
+// Function to get the content in the db
 export const getDb = async () => {
   try {
     const connection = await openDB('jate', 1)
