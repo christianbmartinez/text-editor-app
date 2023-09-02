@@ -16,15 +16,13 @@ butInstall.addEventListener('click', async () => {
   if (!promptEvent) {
     return
   }
-  const result = await promptEvent.userChoice
-  console.log(result)
   promptEvent.prompt()
   window.deferredPrompt = null
   butInstall.classList.toggle('hidden', true)
 })
 
 // TODO: Add an handler for the `appinstalled` event
-window.addEventListener('appinstalled', (e) => {
+window.addEventListener('appinstalled', () => {
   console.log('appinstalled event fired!')
   window.deferredPrompt = null
 })
